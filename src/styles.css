@@ -1,0 +1,279 @@
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --whatsapp-color: #25d366;
+    --dark-overlay: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    padding-top: 0; 
+}
+
+/* --- NEW HEADER STYLES --- */
+.custom-header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 0;
+    z-index: 1020;
+    position: sticky;
+    top: 0;
+}
+
+.brand-text h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+    line-height: 1;
+}
+
+.brand-text p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Desktop Navigation Pills */
+.nav-pill-link {
+    color: #333;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.nav-pill-link:hover {
+    color: var(--primary-color);
+    background: rgba(13, 110, 253, 0.05);
+}
+
+.nav-pill-link.active {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    box-shadow: 0 4px 6px rgba(13, 110, 253, 0.3);
+}
+
+.header-search {
+    position: relative;
+    max-width: 300px;
+}
+
+.header-search input {
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 40px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    background: #f8f9fa;
+}
+
+.header-search input:focus {
+    background: #fff;
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.search-icon-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    background: none;
+    border: none;
+}
+
+/* --- MOBILE MENU OVERLAY (Corporate Modal Style) --- */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 2050; /* Higher than header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.mobile-nav-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+    color: var(--primary-color);
+}
+
+/* --- FLOATING WHATSAPP BUTTON --- */
+.floating-wa-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-wa-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: white;
+}
+
+/* 1. Carousel Customization */
+.carousel-item {
+    height: 550px;
+    background-color: #000;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.6;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    padding: 30px;
+    border-radius: 15px;
+    bottom: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* 3. Product Card Hover Effects */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+/* 4. Owner Section */
+.owner-section {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+}
+.owner-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.owner-img:hover {
+    transform: scale(1.05);
+}
+
+/* 5. Previous Works & Clients */
+.work-img-container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.work-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.work-img-container:hover .work-img {
+    transform: scale(1.1);
+}
+
+.client-logo {
+    max-height: 60px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+.client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 15px;
+}
