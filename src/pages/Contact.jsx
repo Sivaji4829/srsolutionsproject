@@ -51,7 +51,7 @@ Please confirm.`;
                         </div>
                         <div>
                             <h6 className="fw-bold mb-1">Our Location</h6>
-                            <p className="text-muted mb-0 small">Shop No. 12, Tech Market, Main Road, Guntur - 522001</p>
+                            <p className="text-muted mb-0 small">Door No 2 B, Main Road 6th Line, Nallacheruvu, Guntur - 522003(Beside Sbi Atm)</p>
                         </div>
                     </div>
 
